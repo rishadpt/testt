@@ -1,0 +1,94 @@
+.card {
+  width: 100%;
+  height: 300px;
+  background: url("../../../public/images/card-bg.png") no-repeat center;
+  background-color: #000;
+  background-size: cover;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  padding: 25px;
+  font-family: "Anonymous Pro", monospace;
+  .top {
+    width: 100%;
+    justify-items: end;
+    & > h1 {
+      padding-top: 15px;
+      text-align: end;
+      font-weight: bold;
+      font-size: 45px;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+  .bottom {
+    display: grid;
+    align-content: end;
+    align-items: center;
+    grid-auto-flow: column;
+    .card-holder-details {
+      .card-exp {
+        padding: 5px 0;
+        font-size: 18px;
+      }
+      .card-name{
+        padding: 5px 0;
+        font-size: 24px;
+      }
+      .card-no {
+        font-size: 20px;
+        color: #009991;
+      }
+    }
+    .vendor {
+      place-self: end;
+      font-weight: 800;
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width:"1400px") {
+    .card{
+        height: 250px;
+    }
+}
+@media (min-width: "1250px") and (max-width:"1400px") {
+  .card .bottom .card-holder-details .card-no{
+    font-size: 20px;
+  }
+  .card .bottom .card-holder-details .card-name{
+    font-size: 18px;
+  }
+  .card .bottom .card-holder-details .card-exp{
+    font-size: 15px;
+  }
+  .card {
+    height: 350px;
+  }
+}
+@media (max-width: "1024") {
+  .card {
+    height: 300px;
+  }
+}
+@media (max-width: "980px") {
+  .card .bottom .card-holder-details .card-no{
+    font-size: 24px;
+  }
+  .card .bottom .card-holder-details .card-name{
+    font-size: 28px;
+  }
+  .card .bottom .card-holder-details .card-exp{
+    font-size: 20px;
+  }
+  .card {
+    height: 400px;
+  }
+}
+@media (max-width: "650px") {
+  .card {
+    height: 300px;
+  }
+}

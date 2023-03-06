@@ -1,0 +1,53 @@
+.purchase-cards {
+  width: 100%;
+  height: auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #0000002d, -5px -5px 5px #fff;
+  .cardno-type{
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 24px;
+      color: #009991;
+    }
+    h4{
+      font-weight: 400;
+      font-size: 15px;
+      
+    }
+  }
+  .cn_ns_container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .date-amount {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .amount {
+      font-size: 34px;
+      span {
+        opacity: 0.8;
+        font-size: 20px;
+      }
+    }
+    .date {
+      opacity: 0.8;
+      font-size: 24px;
+    }
+  }
+  hr {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width:420px) {
+  .purchase-cards .date-amount .date,.purchase-cards .cardno-type p{
+    font-size: 18px ;
+  }
+  .purchase-cards .date-amount .amount{
+    font-size: 20px;
+  }
+}

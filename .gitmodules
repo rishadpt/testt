@@ -1,0 +1,4 @@
+[submodule "src/submodule"]
+	path = src/submodule
+	url = https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/SubModule-Login-Reactjs
+	branch = master

@@ -1,0 +1,35 @@
+
+
+
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - git config http.postBuffer 524288000
+      - git submodule init
+      - git submodule update --recursive
+  install:
+    runtime-versions:
+      nodejs: 16
+
+    commands:
+      # install yarn
+      - npm install --legacy-peer-deps
+      
+      - git config --global credential.helper '!aws codecommit credential-helper $@'
+      - git config --global credential.UseHttpPath true
+ 
+
+  build:
+    commands:
+      # run build script
+      - npm run build 
+
+artifacts:
+  # include all files required to run application
+  # we include only the static build files
+  files:
+    - '**/*'
+  base-directory: 'build'
