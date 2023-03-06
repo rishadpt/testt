@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import server from '../public/sw'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(server)
       .then(registration => {
         console.log('Service worker registered:', registration);
       })
