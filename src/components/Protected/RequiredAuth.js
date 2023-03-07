@@ -29,7 +29,6 @@ export default function RequiredAuth({ children }) {
   }, [auth.loginVerify]);
 
  
-
   useEffect(() => {
     if (auth.loginVerify) {
       return children;
@@ -37,4 +36,7 @@ export default function RequiredAuth({ children }) {
       navigate("/signin");
     }
   }, [auth.loginVerify])
+  
+
+ 
 }
