@@ -30,9 +30,11 @@ export default function RequiredAuth({ children }) {
 
  
 
-  if (auth.loginVerify) {
-    return children;
-  } else {
-    navigate("/signin");
-  }
+  useEffect(() => {
+    if (auth.loginVerify) {
+      return children;
+    } else {
+      navigate("/signin");
+    }
+  }, [auth.loginVerify])
 }
