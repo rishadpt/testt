@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
+import Downloadprompt from "./components/downloadPrompt/Downloadprompt";
 import ProtectedProvider from "./components/Protected/Protected";
 import Pages from "./Navigations/pages";
 
@@ -14,6 +15,7 @@ function App() {
     <LoadingContext.Provider value={{ loading, setLoading }}>
       <ProtectedProvider>
         <div className="App">
+          <Downloadprompt/>
           <Pages />
         </div>
       </ProtectedProvider>
